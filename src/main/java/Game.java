@@ -1,5 +1,4 @@
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+
 
 import java.util.Random;
 import java.util.Scanner;
@@ -49,15 +48,15 @@ public class Game {
         {
             System.out.println("It's a tie");
             scoreBoard.incrementTie();
-        } else if (choicenum == 1 && compnum == 3) //user wins rock vs scissors
+        } else if (choicenum == 1 && compnum == 3)
         {
             System.out.println("you win!");
             scoreBoard.incrementWins();
-        } else if (choicenum == 3 && compnum == 2) //user wins scissors vs paper
+        } else if (choicenum == 3 && compnum == 2)
         {
             System.out.println("you win!");
             scoreBoard.incrementWins();
-        } else if (choicenum == 2 && compnum ==1) //user wins paper vs rock
+        } else if (choicenum == 2 && compnum ==1)
         {
             System.out.println("you win!");
             scoreBoard.incrementWins();
@@ -87,8 +86,7 @@ public class Game {
     }
 
     private int getChoiseComputer() {
-        int compnum = (int) (random.nextInt(3)) + 1;//computer generate random num
-        //print computer choice
+        int compnum = (int) (random.nextInt(3)) + 1;
         if (compnum == 1) System.out.println("Computer chose rock");
         if (compnum == 2) System.out.println("Computer chose paper");
         if (compnum == 3) System.out.println("Computer chose scissors");
